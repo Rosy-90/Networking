@@ -11,6 +11,8 @@
 		8B4DDEBB2858BE1500F68125 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4DDEB02858BE1500F68125 /* Networking.framework */; };
 		8B4DDEC02858BE1500F68125 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DDEBF2858BE1500F68125 /* NetworkingTests.swift */; };
 		8B4DDEC12858BE1500F68125 /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B4DDEB32858BE1500F68125 /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B4DDECD2858C37A00F68125 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DDECC2858C37A00F68125 /* HTTPError.swift */; };
+		8B4DDECF2858C41C00F68125 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DDECE2858C41C00F68125 /* HTTPMethod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		8B4DDEB42858BE1500F68125 /* Networking.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Networking.docc; sourceTree = "<group>"; };
 		8B4DDEBA2858BE1500F68125 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B4DDEBF2858BE1500F68125 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
+		8B4DDECC2858C37A00F68125 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
+		8B4DDECE2858C41C00F68125 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 		8B4DDEB22858BE1500F68125 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				8B4DDECA2858C33500F68125 /* Manager */,
+				8B4DDECB2858C34700F68125 /* HTTP */,
 				8B4DDEB32858BE1500F68125 /* Networking.h */,
 				8B4DDEB42858BE1500F68125 /* Networking.docc */,
 			);
@@ -83,6 +89,22 @@
 				8B4DDEBF2858BE1500F68125 /* NetworkingTests.swift */,
 			);
 			path = NetworkingTests;
+			sourceTree = "<group>";
+		};
+		8B4DDECA2858C33500F68125 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		8B4DDECB2858C34700F68125 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				8B4DDECC2858C37A00F68125 /* HTTPError.swift */,
+				8B4DDECE2858C41C00F68125 /* HTTPMethod.swift */,
+			);
+			path = HTTP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,7 +216,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B4DDECD2858C37A00F68125 /* HTTPError.swift in Sources */,
 				8B4DDEB52858BE1500F68125 /* Networking.docc in Sources */,
+				8B4DDECF2858C41C00F68125 /* HTTPMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +420,7 @@
 		8B4DDEC82858BE1500F68125 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3H5KY3LSB5;
@@ -412,6 +437,7 @@
 		8B4DDEC92858BE1500F68125 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3H5KY3LSB5;
