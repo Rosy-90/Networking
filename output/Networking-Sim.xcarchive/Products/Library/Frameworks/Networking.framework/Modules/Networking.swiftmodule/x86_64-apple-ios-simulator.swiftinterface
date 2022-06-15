@@ -1,0 +1,18 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-module-flags: -target x86_64-apple-ios15.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Networking
+import Foundation
+@_exported import Networking
+import Swift
+import _Concurrency
+public struct HTTPMethod : Swift.RawRepresentable, Swift.Equatable, Swift.Hashable {
+  public let rawValue: Swift.String
+  public init?(rawValue: Swift.String)
+  public static let get: Networking.HTTPMethod?
+  public static let post: Networking.HTTPMethod?
+  public typealias RawValue = Swift.String
+}
+@_hasMissingDesignatedInitializers public class Service {
+  public static let shared: Networking.Service
+  @objc deinit
+}
