@@ -16,7 +16,9 @@ typealias Completion<T: Decodable> =  ((Result<[T], HTTPError>) -> Void)
 public class Service: Servicable {
     public static let shared = Service()
 
-    func fetchData<T: Decodable>(networkClient: NetworkClient, type: T.Type, completionHandler: @escaping Completion<T>) {
+    func fetchData<T: Decodable>(networkClient: NetworkClient,
+                                 type: T.Type,
+                                 completionHandler: @escaping Completion<T>) {
         let urlSession = URLSession(configuration: .default)
         var dataTask: URLSessionDataTask?
 
